@@ -1,0 +1,60 @@
+{
+  "n_customers": 60000,
+  "base_rate": 0.1029,
+  "n_train": 39000,
+  "n_calib": 9000,
+  "n_test": 12000,
+  "auc_with_leaky_feature": 0.9278,
+  "logistic_auc": 0.8463,
+  "logistic_pr_auc": 0.4742,
+  "logistic_ks": 0.5472,
+  "logistic_top_decile_lift": 4.78,
+  "gbm_auc": 0.8501,
+  "gbm_pr_auc": 0.4928,
+  "gbm_ks": 0.5455,
+  "gbm_top_decile_lift": 4.95,
+  "leakage_inflation_auc_pts": 0.0777,
+  "top_logit_drivers_std_coef": {
+    "txn_m0": -1.338,
+    "ses_avg_3m": -0.957,
+    "balance_ratio_3m": -0.652,
+    "balance_m0": -0.418,
+    "tenure_months": -0.273,
+    "txn_trend": -0.213
+  },
+  "gbm_brier_raw": 0.06882,
+  "gbm_brier_calibrated": 0.06911,
+  "gbm_ece_raw": 0.0038,
+  "gbm_ece_calibrated": 0.0054,
+  "drift_and_stability": {
+    "txn_avg_3m": 0.006,
+    "ses_avg_3m": 0.004,
+    "balance_m0": 0.003,
+    "salary_regularity": 0.006,
+    "age": 0.0,
+    "paid_channel_share_old_vs_new": "22.9% -> 35.0%",
+    "score_psi_old_vs_new": 0.112,
+    "auc_old_cohorts_holdout": 0.8445,
+    "auc_new_cohorts_holdout": 0.8492
+  },
+  "economics": {
+    "assumptions": {
+      "value_per_saved_customer_gbp": 120.0,
+      "offer_cost_gbp": 6.0,
+      "save_rate": 0.15,
+      "breakeven_prob": 0.333
+    },
+    "net_value_gbp_test_set": {
+      "target_all": -49770,
+      "random_20pct": -10170,
+      "model_top20pct": 702,
+      "model_breakeven_threshold": 3618
+    },
+    "customers_targeted_at_breakeven": 867,
+    "share_targeted": 0.072,
+    "precision_among_targeted": 0.565,
+    "recall_of_churners_captured": 0.397,
+    "uplift_vs_target_all_gbp": 53388,
+    "uplift_vs_random20_gbp": 13788
+  }
+}
